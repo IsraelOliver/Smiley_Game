@@ -1,4 +1,3 @@
-
 //Classe para ter uma gravidade global
 
 namespace sprite_animado
