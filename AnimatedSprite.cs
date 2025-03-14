@@ -13,8 +13,8 @@ namespace sprite_animado{
         private int currentFrame;
         private int totalFrames;
         private Vector2 position;
-        private float velocityY;
-        private float velocityX;
+        private float velocityY; //definindo velocidade em Y
+        private float velocityX; //definindo velocidade em X
         private bool isMoving;
         private bool facingRight = true;
         private Gravity gravity;
