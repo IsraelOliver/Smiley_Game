@@ -46,7 +46,21 @@ public class Game1 : Game
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
 
+        //atualiza o animatedSprite
         animatedSprite.Update();
+
+        //faz a camera seguir o animatedSprite
+        camera.Follow(animatedSprite.position);
+
+        //controla a camera
+        KeyboardState state = Keyboard.GetState();
+        if(state.IsKeyDown(Keys.OemPlus)) {
+            camera.zoom += 0.01f;
+        }
+
+        if(state.IsKeyDown(Keys.OemMinus)) {
+            camera.zoom -= 0.01f;
+        }
 
         base.Update(gameTime);
     }
@@ -55,7 +69,7 @@ public class Game1 : Game
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
-        _spriteBatch.Begin();
+        _spriteBatch.Begin(transformMatrix: camera.Transform);
 
         _spriteBatch.Draw(background, new Rectangle(0, 0, 800, 480), Color.White);
         animatedSprite.Draw(_spriteBatch);
