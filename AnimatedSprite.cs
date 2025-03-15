@@ -12,12 +12,13 @@ namespace sprite_animado{
         public int Columns { get; set; }
         private int currentFrame;
         private int totalFrames;
-        private Vector2 position;
+        public Vector2 position;
         private float velocityY; //definindo velocidade em Y
         private float velocityX; //definindo velocidade em X
-        private bool isMoving;
-        private bool facingRight = true;
+        private bool isMoving; //grante a movimentação
+        private bool facingRight = true; //verifica para qual lado ele está virado
         private Gravity gravity;
+
         float chao = 350f;
        
         public AnimatedSprite(Texture2D textureWalk, Texture2D textureIdle, int rows, int columns, Vector2 startPosition){
