@@ -9,6 +9,7 @@ public class Game1 : Game
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
     private AnimatedSprite animatedSprite;
+    private camera2D camera;
 
     Texture2D background;
 
@@ -22,6 +23,7 @@ public class Game1 : Game
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
+        camera = new camera2D(GraphicsDevice.Viewport);
 
         base.Initialize();
     }
