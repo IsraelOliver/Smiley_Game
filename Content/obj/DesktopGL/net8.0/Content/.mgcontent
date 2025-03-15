@@ -4,9 +4,9 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>c:/Users/Israel/Desktop/Israel/DotNet/Testes C#/sprite_animado/Content/../Smiley.png</File>
-    <File>c:/Users/Israel/Desktop/Israel/DotNet/Testes C#/sprite_animado/Content/background.png</File>
-    <File>c:/Users/Israel/Desktop/Israel/DotNet/Testes C#/sprite_animado/Content/SmileyWalk.png</File>
+    <File>c:/Users/hhhhi/Desktop/Programação/Testes C#/sprite_animado/Content/../Smiley.png</File>
+    <File>c:/Users/hhhhi/Desktop/Programação/Testes C#/sprite_animado/Content/background.png</File>
+    <File>c:/Users/hhhhi/Desktop/Programação/Testes C#/sprite_animado/Content/SmileyWalk.png</File>
   </SourceFiles>
   <DestFiles>
     <File>Smiley.png</File>
