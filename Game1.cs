@@ -39,12 +39,24 @@ public class Game1 : Game
 
         background = Content.Load<Texture2D> ("background");
 
-    } //lol
+    }
+
+    private void ToggleFullscreen()
+    {
+        _graphics.IsFullScreen = !_graphics.IsFullScreen;
+        _graphics.ApplyChanges();
+    }
 
     protected override void Update(GameTime gameTime)
     {
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
+
+        KeyboardState state = Keyboard.GetState();
+        
+        if (state.IsKeyDown(Keys.F)) {
+            ToggleFullscreen();
+        }
 
         //atualiza o animatedSprite
         animatedSprite.Update();
@@ -53,7 +65,6 @@ public class Game1 : Game
         camera.Follow(animatedSprite.position);
 
         //controla a camera
-        KeyboardState state = Keyboard.GetState();
         if(state.IsKeyDown(Keys.OemPlus)) {
             camera.zoom += 0.01f;
         }
