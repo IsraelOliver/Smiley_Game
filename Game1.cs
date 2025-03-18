@@ -44,8 +44,9 @@ public class Game1 : Game
 
         Texture2D tileTexture = Content.Load<Texture2D>("Title"); // Carrega textura do tile
         tileMap = new TileMap(tileTexture);
-        
-        animatedSprite = new AnimatedSprite(textureWalk, textureIdle, 7, 2, new Vector2(100, 200));
+
+        Vector2 startPosition = tileMap.GetSpawnPosition();
+        animatedSprite = new AnimatedSprite(textureWalk, textureIdle, 7, 2, startPosition, tileMap);
 
     }
 
@@ -87,7 +88,7 @@ public class Game1 : Game
 
         GraphicsDevice.SetRenderTarget(null);
 
-         _spriteBatch.Begin();
+        _spriteBatch.Begin();
         _spriteBatch.Draw(_renderTarget, new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), Color.White);
         _spriteBatch.End();
 

@@ -10,18 +10,19 @@ namespace sprite_animado{
         public Texture2D textureWalk { get; set; }
         public int Rows { get; set; }
         public int Columns { get; set; }
+        public Vector2 position;
+
+        private bool isOnGround = false;
         private int currentFrame;
         private int totalFrames;
-        public Vector2 position;
+        private TileMap tileMap;
         private float velocityY; //definindo velocidade em Y
         private float velocityX; //definindo velocidade em X
         private bool isMoving; //grante a movimentação
         private bool facingRight = true; //verifica para qual lado ele está virado
         private Gravity gravity;
-
-        float chao = 350f;
        
-        public AnimatedSprite(Texture2D textureWalk, Texture2D textureIdle, int rows, int columns, Vector2 startPosition){
+        public AnimatedSprite(Texture2D textureWalk, Texture2D textureIdle, int rows, int columns, Vector2 startPosition, TileMap tileMap){
             this.textureWalk = textureWalk;
             this.textureIdle = textureIdle;
             Rows = rows;
@@ -33,6 +34,7 @@ namespace sprite_animado{
             velocityX = 0f;
             isMoving = false;
             gravity = new Gravity();
+            this.tileMap = tileMap;
 
         }   
 
@@ -41,8 +43,9 @@ namespace sprite_animado{
             KeyboardState state = Keyboard.GetState();
             isMoving = false;
 
-            if(state.IsKeyDown(Keys.W) && position.Y >= chao ) {
-                velocityY -= 10f;
+            if (state.IsKeyDown(Keys.W) && isOnGround) {
+                velocityY = -10f;
+                isOnGround = false; // 🔹 Evita que o personagem pule novamente no ar
             }
 
             if(state.IsKeyDown(Keys.A)) {
@@ -71,16 +74,22 @@ namespace sprite_animado{
                 currentFrame = 0;
             }
 
-            gravity.ApplyGravity(ref velocityY);
+            if (tileMap.IsSolidTileAtPosition(position.X, position.Y + velocityY + tileMap.tileSize)) {
+                isOnGround = true;
+                velocityY = 0; 
+                                
+                position.Y = (float)Math.Floor(position.Y / tileMap.tileSize) * tileMap.tileSize; // Ajuste para alinhar ao tile   
+            } else {
+                isOnGround = false;
+                gravity.ApplyGravity(ref velocityY);
+            }
+
+//            gravity.ApplyGravity(ref velocityY);
             position.Y += velocityY;
             position.X += velocityX;
 
             Console.WriteLine($"velocityY: {velocityY}");
 
-            if(position.Y >= chao) {
-                position.Y = chao;
-                velocityY = 0;
-            }
             Console.WriteLine($"Posição X: {position.X}, Velocidade X: {velocityX}");
         }
         
