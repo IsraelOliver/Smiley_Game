@@ -41,22 +41,12 @@ public class Game1 : Game
 
     }
 
-    private void ToggleFullscreen()
-    {
-        _graphics.IsFullScreen = !_graphics.IsFullScreen;
-        _graphics.ApplyChanges();
-    }
-
     protected override void Update(GameTime gameTime)
     {
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
 
         KeyboardState state = Keyboard.GetState();
-        
-        if (state.IsKeyDown(Keys.F)) {
-            ToggleFullscreen();
-        }
 
         //atualiza o animatedSprite
         animatedSprite.Update();

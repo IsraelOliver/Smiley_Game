@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Israel\\Desktop\\Israel\\DotNet\\Testes C#\\sprite_animado\\sprite_animado.csproj": {}
+    "C:\\Users\\Israel\\Desktop\\Israel\\DotNet\\Testes C#\\sprite_animado\\sprite_animado.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Israel\\Desktop\\Israel\\DotNet\\Testes C#\\sprite_animado\\sprite_animado.csproj": {
+    "C:\\Users\\Israel\\Desktop\\Israel\\DotNet\\Testes C#\\sprite_animado\\sprite_animado.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Israel\\Desktop\\Israel\\DotNet\\Testes C#\\sprite_animado\\sprite_animado.csproj",
+        "projectUniqueName": "C:\\Users\\Israel\\Desktop\\Israel\\DotNet\\Testes C#\\sprite_animado\\sprite_animado.csproj",
         "projectName": "sprite_animado",
-        "projectPath": "c:\\Users\\Israel\\Desktop\\Israel\\DotNet\\Testes C#\\sprite_animado\\sprite_animado.csproj",
+        "projectPath": "C:\\Users\\Israel\\Desktop\\Israel\\DotNet\\Testes C#\\sprite_animado\\sprite_animado.csproj",
         "packagesPath": "C:\\Users\\Israel\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Israel\\Desktop\\Israel\\DotNet\\Testes C#\\sprite_animado\\obj\\",
+        "outputPath": "C:\\Users\\Israel\\Desktop\\Israel\\DotNet\\Testes C#\\sprite_animado\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Israel\\AppData\\Roaming\\NuGet\\NuGet.Config"
