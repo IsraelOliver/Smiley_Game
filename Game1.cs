@@ -12,8 +12,7 @@ public class Game1 : Game
     private camera2D camera;
     private RenderTarget2D _renderTarget;
     private int baseWidth = 1920, baseHeight = 1080;
-
-    Texture2D background;
+    private TileMap tileMap;
 
     public Game1()
     {
@@ -31,9 +30,6 @@ public class Game1 : Game
         // TODO: Add your initialization logic here
         _renderTarget = new RenderTarget2D(GraphicsDevice, baseWidth, baseHeight);
 
-        float scaleX = (float)_graphics.PreferredBackBufferWidth / baseWidth;
-        float scaleY = (float)_graphics.PreferredBackBufferHeight / baseHeight;
-
         camera = new camera2D(GraphicsDevice.Viewport);
 
         base.Initialize();
@@ -45,10 +41,11 @@ public class Game1 : Game
 
         Texture2D textureIdle = Content.Load<Texture2D> ("Smiley");
         Texture2D textureWalk = Content.Load<Texture2D> ("SmileyWalk");
+
+        Texture2D tileTexture = Content.Load<Texture2D>("Title"); // Carrega textura do tile
+        tileMap = new TileMap(tileTexture);
         
         animatedSprite = new AnimatedSprite(textureWalk, textureIdle, 7, 2, new Vector2(100, 200));
-
-        background = Content.Load<Texture2D> ("background");
 
     }
 
@@ -84,9 +81,14 @@ public class Game1 : Game
 
         _spriteBatch.Begin(transformMatrix: camera.Transform);
 
-        _spriteBatch.Draw(background, new Rectangle(0, 0, 800, 480), Color.White);
+        tileMap.Draw(_spriteBatch);
         animatedSprite.Draw(_spriteBatch);
+        _spriteBatch.End();
 
+        GraphicsDevice.SetRenderTarget(null);
+
+         _spriteBatch.Begin();
+        _spriteBatch.Draw(_renderTarget, new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), Color.White);
         _spriteBatch.End();
 
         base.Draw(gameTime);

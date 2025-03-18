@@ -49,10 +49,16 @@ namespace sprite_animado{
                 velocityX = -1.5f;
                 isMoving = true;
                 facingRight = true;
+                if (state.IsKeyDown(Keys.LeftShift)) {
+                    velocityX = -3.5f;
+                }
             } else if(state.IsKeyDown(Keys.D)) {
                 velocityX = 1.5f;
                 isMoving = true;
                 facingRight = false;
+                if (state.IsKeyDown(Keys.LeftShift)) {
+                    velocityX = 3.5f;
+                }
             } else {
                 velocityX = 0;
             }

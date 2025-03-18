@@ -56,3 +56,4 @@ c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\obj\Debug\net8.0\r
 c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\obj\Debug\net8.0\sprite_animado.pdb
 c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\obj\Debug\net8.0\sprite_animado.genruntimeconfig.cache
 c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\obj\Debug\net8.0\ref\sprite_animado.dll
+c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\bin\Debug\net8.0\Content\Title.xnb
