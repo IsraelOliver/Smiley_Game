@@ -11,7 +11,6 @@ public class Game1 : Game
     private AnimatedSprite animatedSprite;
     private camera2D camera;
     private RenderTarget2D _renderTarget;
-    private Vector2 _scale;
     private int baseWidth = 1920, baseHeight = 1080;
 
     Texture2D background;
