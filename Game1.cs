@@ -10,6 +10,9 @@ public class Game1 : Game
     private SpriteBatch _spriteBatch;
     private AnimatedSprite animatedSprite;
     private camera2D camera;
+    private RenderTarget2D _renderTarget;
+    private Vector2 _scale;
+    private int baseWidth = 1920, baseHeight = 1080;
 
     Texture2D background;
 
@@ -18,11 +21,20 @@ public class Game1 : Game
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+
+        _graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+        _graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+        _graphics.ApplyChanges();
     }
 
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
+        _renderTarget = new RenderTarget2D(GraphicsDevice, baseWidth, baseHeight);
+
+        float scaleX = (float)_graphics.PreferredBackBufferWidth / baseWidth;
+        float scaleY = (float)_graphics.PreferredBackBufferHeight / baseHeight;
+
         camera = new camera2D(GraphicsDevice.Viewport);
 
         base.Initialize();
@@ -68,6 +80,7 @@ public class Game1 : Game
 
     protected override void Draw(GameTime gameTime)
     {
+        GraphicsDevice.SetRenderTarget(_renderTarget);
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
         _spriteBatch.Begin(transformMatrix: camera.Transform);
