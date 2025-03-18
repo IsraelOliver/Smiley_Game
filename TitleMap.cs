@@ -5,7 +5,7 @@ namespace sprite_animado {
     public class TileMap {
         private Texture2D tileTexture;
         private int[,] tiles; // Matriz para armazenar os blocos do mapa
-        private int tileSize = 16; // Tamanho de cada tile (em pixels)
+        private int tileSize = 8; // Tamanho de cada tile (em pixels)
 
         public TileMap(Texture2D texture) {
             tileTexture = texture;
@@ -15,9 +15,14 @@ namespace sprite_animado {
         private void LoadTiles() {
             // Exemplo: um mapa simples (0 = vazio, 1 = bloco de chão)
             tiles = new int[,] {
-                { 0, 0, 1, 1, 1, 1, 1, 0, 0 },
-                { 0, 0, 1, 0, 0, 0, 1, 0, 0 },
-                { 1, 1, 1, 0, 0, 0, 1, 1, 1 }
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                { 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+                { 1, 1, 1, 1, 1, 1, 1, 1, 1 }
             };
         }
 
