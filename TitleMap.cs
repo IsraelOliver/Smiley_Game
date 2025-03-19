@@ -4,12 +4,32 @@ using Microsoft.Xna.Framework.Graphics;
 namespace sprite_animado {
     public class TileMap {
         private Texture2D tileTexture;
-        private int[,] tiles; // Matriz para armazenar os blocos do mapa
-        public int tileSize = 32; // Tamanho de cada tile (em pixels)
+        private int[,] tiles;
+        public int tileSize = 32;
+        private int mapWidht = 50;
+        private int mapHeight = 20;
+        private FastNoiseLite noise;
 
         public TileMap(Texture2D texture) {
             tileTexture = texture;
-            LoadTiles();
+            noise = new FastNoiseLite();
+            noise.SetNoiseType(FastNoiseLite.NoiseType.OpenSimplex2);
+            noise.SetFrequency(0.1f);
+            GenerateTerrain();
+        }
+
+        public void GenerateTerrain() {
+            tiles = new int[mapHeight, mapWidht];
+            int groundLevel = mapHeight / 2;
+
+            for (int x = 0; x < mapWidht; x++) {
+                float noiseValue = noise.GetNoise(x * 0.1f, 0) * 5;
+                int currentGroundLevel = groundLevel + (int)noiseValue;
+
+                for (int y = 0; y < mapHeight; y++) {
+                    tiles[y, x] = (y >= currentGroundLevel) ? 1 : 0;
+                }
+            }
         }
 
         public bool IsSolidTileAtPosition(float x, float y) {
@@ -33,19 +53,6 @@ public Vector2 GetSpawnPosition()
     }
     return new Vector2(0, 0); // Caso não encontre um tile sólido
 }
-
-        private void LoadTiles() {
-            // Exemplo: um mapa simples (0 = vazio, 1 = bloco de chão)
-            tiles = new int[,] {
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0 },
-                { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-            };
-        }
 
         public void Draw(SpriteBatch spriteBatch) {
             for (int y = 0; y < tiles.GetLength(0); y++) {
