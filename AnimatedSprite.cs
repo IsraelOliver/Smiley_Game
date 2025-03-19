@@ -44,7 +44,7 @@ namespace sprite_animado{
             isMoving = false;
 
             if (state.IsKeyDown(Keys.W) && isOnGround) {
-                velocityY = -12f;
+                velocityY = -13f;
                 isOnGround = false; // 🔹 Evita que o personagem pule novamente no ar
             }
 
@@ -78,8 +78,9 @@ namespace sprite_animado{
             if (tileMap.IsSolidTileAtPosition(position.X, position.Y + velocityY + tileMap.tileSize)) {
                 isOnGround = true;
                 velocityY = 0;
-                                
-                position.Y = (float)Math.Round(position.Y / tileMap.tileSize) * tileMap.tileSize; // Ajuste para alinhar ao tile   
+                
+                // Ajuste para alinhar ao tile || Round arredonda para cima, e Floor arredonda para baixo.
+                position.Y = (float)Math.Round(position.Y / tileMap.tileSize) * tileMap.tileSize;
             } else {
                 isOnGround = false;
                 gravity.ApplyGravity(ref velocityY);
