@@ -6,15 +6,15 @@ namespace sprite_animado {
         private Texture2D tileTexture;
         private int[,] tiles;
         public int tileSize = 32;
-        private int mapWidht = 50;
-        private int mapHeight = 20;
+        private int mapWidht = 100;
+        private int mapHeight = 30;
         private FastNoiseLite noise;
 
         public TileMap(Texture2D texture) {
             tileTexture = texture;
             noise = new FastNoiseLite();
             noise.SetNoiseType(FastNoiseLite.NoiseType.OpenSimplex2);
-            noise.SetFrequency(0.1f);
+            noise.SetFrequency(0.5f);
             GenerateTerrain();
         }
 
