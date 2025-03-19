@@ -44,7 +44,7 @@ namespace sprite_animado{
             isMoving = false;
 
             if (state.IsKeyDown(Keys.W) && isOnGround) {
-                velocityY = -13f;
+                velocityY = -15f;
                 isOnGround = false; // 🔹 Evita que o personagem pule novamente no ar
             }
 
@@ -84,6 +84,15 @@ namespace sprite_animado{
             } else {
                 isOnGround = false;
                 gravity.ApplyGravity(ref velocityY);
+            }
+
+            if (tileMap.IsSolidTileAtPosition(position.X + velocityX, position.Y)) {
+                velocityX = 0; // Se houver um tile sólido à esquerda/direita, ele para
+            }
+
+            // 🔹 Impedir que o personagem entre nos tiles por baixo (batendo a cabeça)
+            if (velocityY < 0 && tileMap.IsSolidTileAtPosition(position.X, position.Y + velocityY)) {
+                velocityY = 0; // Se houver um tile acima, cancela a subida
             }
 
 //            gravity.ApplyGravity(ref velocityY);
