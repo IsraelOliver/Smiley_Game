@@ -1,23 +1,24 @@
 //Classe para ter uma gravidade global
 
-using System;
-
 namespace sprite_animado
 {
     public class Gravity
     {
-    public float GravityForce { get; set; }
-    public float TerminalVelocity { get; set; }
+        private float gravityForce;
+        private float terminalVelocity;
 
         public Gravity(float gravityForce = 9.8f, float terminalVelocity = 50f)
         {
-            GravityForce = gravityForce;
-            TerminalVelocity = terminalVelocity;
+            this.gravityForce = gravityForce;
+            this.terminalVelocity = terminalVelocity;
         }
 
-        public float GetGravityEffect(float currentVelocity) {
-            float newVelocity = currentVelocity + GravityForce * 0.1f;
-            return MathF.Min(newVelocity, TerminalVelocity);
+        public void ApplyGravity(ref float velocityY)
+        {
+            // Aplica a gravidade, limitando a velocidade máxima
+            velocityY += gravityForce * 0.1f; // Multiplicamos por um fator pequeno para ajustar a escala do jogo
+            if (velocityY > terminalVelocity)
+                velocityY = terminalVelocity;
         }
     }
 }

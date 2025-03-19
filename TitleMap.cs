@@ -14,7 +14,7 @@ namespace sprite_animado {
             tileTexture = texture;
             noise = new FastNoiseLite();
             noise.SetNoiseType(FastNoiseLite.NoiseType.OpenSimplex2);
-            noise.SetFrequency(0.5f);
+            noise.SetFrequency(0.3f);
             GenerateTerrain();
         }
 
@@ -47,7 +47,7 @@ public Vector2 GetSpawnPosition()
     for (int y = 0; y < tiles.GetLength(0); y++) {
         for (int x = 0; x < tiles.GetLength(1); x++) {
             if (tiles[y, x] == 1) { // Primeiro tile sólido encontrado
-                return new Vector2(x * tileSize, (y * tileSize) - tileSize); // Coloca o personagem acima do tile
+                return new Vector2(x * tileSize, y * tileSize); // Coloca o personagem acima do tile
             }
         }
     }
