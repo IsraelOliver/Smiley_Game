@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("sprite_animado")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f42095fd152542b094260cd6c309f213a02a1381")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98aa8ee64f394d8b9c5cccf70a63ab9bf34d1386")]
 [assembly: System.Reflection.AssemblyProductAttribute("sprite_animado")]
 [assembly: System.Reflection.AssemblyTitleAttribute("sprite_animado")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
