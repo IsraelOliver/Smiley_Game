@@ -86,8 +86,14 @@ namespace sprite_animado{
                 gravity.ApplyGravity(ref velocityY);
             }
 
+            // Verifica se há um tile sólido na frente do personagem
             if (tileMap.IsSolidTileAtPosition(position.X + velocityX, position.Y)) {
-                velocityX = 0; // Se houver um tile sólido à esquerda/direita, ele para
+                // Verifica se há espaço livre logo acima (1 tile acima)
+                if (!tileMap.IsSolidTileAtPosition(position.X + velocityX, position.Y - tileMap.tileSize)) {
+                    position.Y -= tileMap.tileSize; // Move o personagem 1 tile para cima automaticamente
+                } else {
+                    velocityX = 0; // Se não houver espaço, bloqueia o movimento
+                }
             }
 
             // 🔹 Impedir que o personagem entre nos tiles por baixo (batendo a cabeça)
