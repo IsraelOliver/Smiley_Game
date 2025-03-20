@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -5,7 +6,7 @@ namespace sprite_animado {
     public class TileMap {
         private Texture2D tileTexture;
         private int[,] tiles;
-        public int tileSize = 32;
+        public int tileSize = 11;
         private int mapWidht = 1000;
         private int mapHeight = 500;
         private FastNoiseLite noise;
@@ -79,8 +80,9 @@ public Vector2 GetSpawnPosition()
                 for (int x = 0; x < tiles.GetLength(1); x++) {
                     if (tiles[y, x] == 1) { // Se for um tile válido
                         spriteBatch.Draw(
-                            tileTexture, 
-                            new Rectangle(x * tileSize, y * tileSize, tileSize, tileSize), // 🔹 Redimensiona para 32x32
+                            tileTexture,
+                            new Rectangle(x * tileSize, y * tileSize, tileSize, tileSize), // 🔹 Ajuste correto do tamanho
+                            new Rectangle(0, 0, tileTexture.Width, tileTexture.Height), // 🔹 Usa a textura completa corretamente
                             Color.White
                         );
                     }
