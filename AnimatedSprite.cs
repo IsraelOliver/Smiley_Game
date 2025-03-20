@@ -117,8 +117,11 @@ namespace sprite_animado{
             Rectangle destinationRectangle = new Rectangle((int)position.X, (int)position.Y, width, height);
 
             SpriteEffects spriteEffect = facingRight ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
-        
-            spriteBatch.Draw(currentTexture, destinationRectangle, sourceRectangle, Color.White, 0f, Vector2.Zero, spriteEffect, 0f);
+
+            Vector2 origin =  new Vector2(width / 2, height / 2);
+            Vector2 adjustedPosition = new Vector2(position.X, position.Y + height / 2);
+
+            spriteBatch.Draw(currentTexture, adjustedPosition, sourceRectangle, Color.White, 0f, origin, 1f, spriteEffect, 0f);
         }   
     }
 }
