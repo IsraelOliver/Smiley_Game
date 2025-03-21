@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\hhhhi\\Desktop\\Programação\\Testes C#\\sprite_animado\\Smiley_Game\\sprite_animado.csproj": {}
+    "C:\\Users\\hhhhi\\Desktop\\Programação\\Testes C#\\sprite_animado\\Smiley_Game\\sprite_animado.csproj": {}
   },
   "projects": {
-    "c:\\Users\\hhhhi\\Desktop\\Programação\\Testes C#\\sprite_animado\\Smiley_Game\\sprite_animado.csproj": {
+    "C:\\Users\\hhhhi\\Desktop\\Programação\\Testes C#\\sprite_animado\\Smiley_Game\\sprite_animado.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\hhhhi\\Desktop\\Programação\\Testes C#\\sprite_animado\\Smiley_Game\\sprite_animado.csproj",
+        "projectUniqueName": "C:\\Users\\hhhhi\\Desktop\\Programação\\Testes C#\\sprite_animado\\Smiley_Game\\sprite_animado.csproj",
         "projectName": "sprite_animado",
-        "projectPath": "c:\\Users\\hhhhi\\Desktop\\Programação\\Testes C#\\sprite_animado\\Smiley_Game\\sprite_animado.csproj",
+        "projectPath": "C:\\Users\\hhhhi\\Desktop\\Programação\\Testes C#\\sprite_animado\\Smiley_Game\\sprite_animado.csproj",
         "packagesPath": "C:\\Users\\hhhhi\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\hhhhi\\Desktop\\Programação\\Testes C#\\sprite_animado\\Smiley_Game\\obj\\",
+        "outputPath": "C:\\Users\\hhhhi\\Desktop\\Programação\\Testes C#\\sprite_animado\\Smiley_Game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hhhhi\\AppData\\Roaming\\NuGet\\NuGet.Config"
