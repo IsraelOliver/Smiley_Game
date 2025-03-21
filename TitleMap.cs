@@ -1,4 +1,3 @@
-using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -31,9 +30,9 @@ namespace sprite_animado {
             // Criando o gerador de ruído para cavernas
             FastNoiseLite caveNoise = new FastNoiseLite();
             caveNoise.SetNoiseType(FastNoiseLite.NoiseType.OpenSimplex2);
-            caveNoise.SetFrequency(0.15f); // Frequência ajustada para cavernas
+            caveNoise.SetFrequency(0.05f); // Frequência ajustada para cavernas
             caveNoise.SetFractalType(FastNoiseLite.FractalType.Ridged);
-            caveNoise.SetFractalOctaves(4); // Mais octaves deixam as cavernas mais detalhadas
+            caveNoise.SetFractalOctaves(5); // Mais octaves deixam as cavernas mais detalhadas
 
             for (int x = 0; x < mapWidht; x++) {
                 float noiseValue = noise.GetNoise(x * 0.1f, 0) * 5;
