@@ -1,1 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"c:/Users/Israel/Desktop/Israel/DotNet/Testes C#/sprite_animado/Content/../Smiley.png","c:/Users/Israel/Desktop/Israel/DotNet/Testes C#/sprite_animado/Content/bin/DesktopGL/Content/Smiley.xnb","TextureProcessor","Texture2DContent",1266,57429,0,3965821
+"c:/Users/Israel/Desktop/Israel/DotNet/Testes C#/sprite_animado/Content/background.png","c:/Users/Israel/Desktop/Israel/DotNet/Testes C#/sprite_animado/Content/bin/DesktopGL/Content/background.xnb","TextureProcessor","Texture2DContent",7450,2064469,0,1566186
+"c:/Users/Israel/Desktop/Israel/DotNet/Testes C#/sprite_animado/Content/SmileyWalk.png","c:/Users/Israel/Desktop/Israel/DotNet/Testes C#/sprite_animado/Content/bin/DesktopGL/Content/SmileyWalk.xnb","TextureProcessor","Texture2DContent",1923,57429,0,018745
