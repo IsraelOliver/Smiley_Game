@@ -44,7 +44,9 @@ public class Game1 : Game
 
         Texture2D grassTileTexture = Content.Load<Texture2D>("grass_tile");
         Texture2D dirtTileTexture = Content.Load<Texture2D>("dirt_tile");
-        tileMap = new TileMap(grassTileTexture, dirtTileTexture);
+        Texture2D sandTileTexture = Content.Load<Texture2D>("sand_tile");
+        
+        tileMap = new TileMap(grassTileTexture, dirtTileTexture, sandTileTexture);
 
         Vector2 startPosition = tileMap.GetSpawnPosition();
         animatedSprite = new AnimatedSprite(textureWalk, textureIdle, 7, 2, startPosition, tileMap);
