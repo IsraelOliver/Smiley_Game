@@ -42,8 +42,9 @@ public class Game1 : Game
         Texture2D textureIdle = Content.Load<Texture2D> ("Smiley");
         Texture2D textureWalk = Content.Load<Texture2D> ("SmileyWalk");
 
-        Texture2D tileTexture = Content.Load<Texture2D>("Title"); // Carrega textura do tile
-        tileMap = new TileMap(tileTexture);
+        Texture2D grassTileTexture = Content.Load<Texture2D>("grass_tile");
+        Texture2D dirtTileTexture = Content.Load<Texture2D>("dirt_tile");
+        tileMap = new TileMap(grassTileTexture, dirtTileTexture);
 
         Vector2 startPosition = tileMap.GetSpawnPosition();
         animatedSprite = new AnimatedSprite(textureWalk, textureIdle, 7, 2, startPosition, tileMap);

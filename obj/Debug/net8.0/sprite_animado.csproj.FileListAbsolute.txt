@@ -56,7 +56,6 @@ c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\obj\Debug\net8.0\r
 c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\obj\Debug\net8.0\sprite_animado.pdb
 c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\obj\Debug\net8.0\sprite_animado.genruntimeconfig.cache
 c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\obj\Debug\net8.0\ref\sprite_animado.dll
-c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\bin\Debug\net8.0\Content\Title.xnb
 c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\Smiley_Game\bin\Debug\net8.0\Content\background.xnb
 c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\Smiley_Game\bin\Debug\net8.0\Content\Smiley.xnb
 c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\Smiley_Game\bin\Debug\net8.0\Content\SmileyWalk.xnb
@@ -87,3 +86,6 @@ c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\Smiley_Game\obj\De
 c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\Smiley_Game\obj\Debug\net8.0\sprite_animado.pdb
 c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\Smiley_Game\obj\Debug\net8.0\sprite_animado.genruntimeconfig.cache
 c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\Smiley_Game\obj\Debug\net8.0\ref\sprite_animado.dll
+c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\bin\Debug\net8.0\Content\dirt_tile.xnb
+c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\bin\Debug\net8.0\Content\grass_tile.xnb
+c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\bin\Debug\net8.0\Content\sand_tile.xnb

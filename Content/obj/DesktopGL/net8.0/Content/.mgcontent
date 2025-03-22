@@ -6,11 +6,15 @@
   <SourceFiles>
     <File>c:/Users/Israel/Desktop/Israel/DotNet/Testes C#/sprite_animado/Content/../Smiley.png</File>
     <File>c:/Users/Israel/Desktop/Israel/DotNet/Testes C#/sprite_animado/Content/background.png</File>
+    <File>c:/Users/Israel/Desktop/Israel/DotNet/Testes C#/sprite_animado/Content/dirt_tile.png</File>
+    <File>c:/Users/Israel/Desktop/Israel/DotNet/Testes C#/sprite_animado/Content/grass_tile.png</File>
+    <File>c:/Users/Israel/Desktop/Israel/DotNet/Testes C#/sprite_animado/Content/sand_tile.png</File>
     <File>c:/Users/Israel/Desktop/Israel/DotNet/Testes C#/sprite_animado/Content/SmileyWalk.png</File>
-    <File>c:/Users/Israel/Desktop/Israel/DotNet/Testes C#/sprite_animado/Content/Title.png</File>
   </SourceFiles>
   <DestFiles>
     <File>Smiley.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
