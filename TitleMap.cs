@@ -19,7 +19,7 @@ namespace sprite_animado {
             sandTileTexture = sandTexture;
             noise = new FastNoiseLite();
             noise.SetNoiseType(FastNoiseLite.NoiseType.OpenSimplex2);
-            noise.SetFrequency(0.3f);
+            noise.SetFrequency(0.1f);
             GenerateTerrain();
         }
 
@@ -30,11 +30,11 @@ namespace sprite_animado {
 
             noise = new FastNoiseLite();
             noise.SetNoiseType(FastNoiseLite.NoiseType.OpenSimplex2);
-            noise.SetFrequency(0.08f);
+            noise.SetFrequency(0.10f);
 
             FastNoiseLite caveNoise = new FastNoiseLite();
             caveNoise.SetNoiseType(FastNoiseLite.NoiseType.OpenSimplex2);
-            caveNoise.SetFrequency(0.05f);
+            caveNoise.SetFrequency(0.08f);
             caveNoise.SetFractalType(FastNoiseLite.FractalType.Ridged);
             caveNoise.SetFractalOctaves(5);
 

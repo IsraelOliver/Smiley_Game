@@ -1,4 +1,3 @@
-c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\bin\Debug\net8.0\Content\SmileyWalk.xnb
 c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\bin\Debug\net8.0\sprite_animado.exe
 c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\bin\Debug\net8.0\sprite_animado.deps.json
 c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\bin\Debug\net8.0\sprite_animado.runtimeconfig.json
@@ -25,7 +24,6 @@ c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\obj\Debug\net8.0\
 c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\obj\Debug\net8.0\sprite_animado.genruntimeconfig.cache
 c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\obj\Debug\net8.0\ref\sprite_animado.dll
 c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\bin\Debug\net8.0\Content\background.xnb
-c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\bin\Debug\net8.0\Content\Smiley.xnb
 c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\obj\Debug\net8.0\sprite_animado.sourcelink.json
 c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\bin\Debug\net8.0\Content\background.xnb
 c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\bin\Debug\net8.0\Content\Smiley.xnb
@@ -89,3 +87,4 @@ c:\Users\hhhhi\Desktop\Programação\Testes C#\sprite_animado\Smiley_Game\obj\De
 c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\bin\Debug\net8.0\Content\dirt_tile.xnb
 c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\bin\Debug\net8.0\Content\grass_tile.xnb
 c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\bin\Debug\net8.0\Content\sand_tile.xnb
+c:\Users\Israel\Desktop\Israel\DotNet\Testes C#\sprite_animado\bin\Debug\net8.0\Content\smileyAnimation.xnb

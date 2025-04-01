@@ -1,24 +1,27 @@
 //Classe para ter uma gravidade global
+using Microsoft.Xna.Framework;
 
-namespace sprite_animado
+namespace sprite_animado;
+public class Gravity
 {
-    public class Gravity
+    public float Intensidade { get; set; }
+    public float VelocidadeMaxima { get; set; }
+
+    public Gravity(float intensidade, float velocidadeMaxima)
     {
-        private float gravityForce;
-        private float terminalVelocity;
+        Intensidade = intensidade;
+        VelocidadeMaxima = velocidadeMaxima;
+    }
 
-        public Gravity(float gravityForce = 9.8f, float terminalVelocity = 50f)
+    public Vector2 AplicarGravidade(Vector2 velocidade, float deltaTime)
+    {
+        velocidade.Y += Intensidade * deltaTime;
+
+        if (velocidade.Y > VelocidadeMaxima)
         {
-            this.gravityForce = gravityForce;
-            this.terminalVelocity = terminalVelocity;
+            velocidade.Y = VelocidadeMaxima;
         }
 
-        public void ApplyGravity(ref float velocityY)
-        {
-            // Aplica a gravidade, limitando a velocidade máxima
-            velocityY += gravityForce * 0.1f; // Multiplicamos por um fator pequeno para ajustar a escala do jogo
-            if (velocityY > terminalVelocity)
-                velocityY = terminalVelocity;
-        }
+        return velocidade;
     }
 }
