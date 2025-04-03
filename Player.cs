@@ -15,6 +15,7 @@ namespace sprite_animado
         private bool isOnGround = false;
         private float velocityX;
         private float velocityY;
+        private Vector2 origin;
 
         public Vector2 Position;
 
@@ -22,12 +23,14 @@ namespace sprite_animado
         private bool facingLeft = true;
         private TileMap tileMap;
 
-        public Player(Texture2D walkTexture, int frameWhidth, int frameHeight, int frameCount, Vector2 startPosition, TileMap tileMap)
+        public Player(Texture2D walkTexture, int frameWidth, int frameHeight, int frameCount, Vector2 startPosition, TileMap tileMap)
         {
-            walkAnimation = new Animation(walkTexture, frameWhidth, frameHeight, frameCount);
+            walkAnimation = new Animation(walkTexture, frameWidth, frameHeight, frameCount);
             Position = startPosition;
             gravity = new Gravity(25f, 100f);
             this.tileMap = tileMap;
+
+            origin = new Vector2(frameWidth / 2f, frameHeight / 2f);
         }
 
         public void MovingPlayer() {
@@ -163,7 +166,7 @@ namespace sprite_animado
         public void Draw(SpriteBatch spriteBatch)
         {
             SpriteEffects spriteEffect = facingLeft ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
-            walkAnimation.Draw(spriteBatch, Position, spriteEffect);
+            walkAnimation.Draw(spriteBatch, Position, spriteEffect, origin);
         }
     }
 }

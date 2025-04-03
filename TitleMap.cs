@@ -9,8 +9,8 @@ namespace sprite_animado {
         private Texture2D sandTileTexture;
         private int[,] tiles;
         public int tileSize = 11;
-        private int mapWidht = 1000;
-        private int mapHeight = 500;
+        private int mapWidht = 500;
+        private int mapHeight = 250;
         private FastNoiseLite noise;
 
         public TileMap(Texture2D grassTexture, Texture2D dirtTexture, Texture2D sandTexture) {
@@ -34,7 +34,7 @@ namespace sprite_animado {
 
             FastNoiseLite caveNoise = new FastNoiseLite();
             caveNoise.SetNoiseType(FastNoiseLite.NoiseType.OpenSimplex2);
-            caveNoise.SetFrequency(0.08f);
+            caveNoise.SetFrequency(0.2f);
             caveNoise.SetFractalType(FastNoiseLite.FractalType.Ridged);
             caveNoise.SetFractalOctaves(5);
 
@@ -114,17 +114,17 @@ namespace sprite_animado {
             return tiles[tileY, tileX] == 1 || tiles[tileY, tileX] == 2 || tiles[tileY, tileX] == 3; // Retorna true se for um tile sólido
         }
 
-public Vector2 GetSpawnPosition()
-{
-    for (int y = 0; y < tiles.GetLength(0); y++) {
-        for (int x = 0; x < tiles.GetLength(1); x++) {
-            if (tiles[y, x] == 1) { // Primeiro tile sólido encontrado
-                return new Vector2(x * tileSize, y * tileSize); // Coloca o personagem acima do tile
+        public Vector2 GetSpawnPosition()
+        {
+            for (int y = 0; y < tiles.GetLength(0); y++) {
+                for (int x = 0; x < tiles.GetLength(1); x++) {
+                    if (tiles[y, x] == 2) { // Primeiro tile sólido encontrado
+                        return new Vector2(x * tileSize, y * tileSize); // Coloca o personagem acima do tile
+                    }
+                }
             }
+            return new Vector2(0, 0);
         }
-    }
-    return new Vector2(0, 0);
-}
 
         public void Draw(SpriteBatch spriteBatch)
         {

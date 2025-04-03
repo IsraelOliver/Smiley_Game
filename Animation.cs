@@ -48,10 +48,10 @@ public class Animation
         elapsedTime = 0;
     }
 
-    public void Draw(SpriteBatch spriteBatch, Vector2 position, SpriteEffects effect)
+    public void Draw(SpriteBatch spriteBatch, Vector2 position, SpriteEffects effect, Vector2 origin)
     {
         Rectangle sourceRect = new Rectangle(currentFrame * frameWidth, 0, frameWidth, frameHeight);
-        spriteBatch.Draw(spriteSheet, position, sourceRect, Color.White, 0f, Vector2.Zero, 1f, effect, 0f);
+        spriteBatch.Draw(spriteSheet, position, sourceRect, Color.White, 0f, origin, 1f, effect, 0f);
     }
 
 }
